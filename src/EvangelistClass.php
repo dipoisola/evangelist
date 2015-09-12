@@ -1,8 +1,8 @@
 <?php
 
-namespace League\Skeleton;
+namespace League\Evangelist;
 
-class SkeletonClass
+class EvangelistClass
 {
     /**
      * Create a new Skeleton Instance

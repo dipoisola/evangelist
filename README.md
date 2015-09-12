@@ -35,10 +35,9 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 If you discover any security related issues, please email :author_email instead of using the issue tracker.
 
-## Credits
+## Credit
 
-- [:author_name][link-author]
-- [All Contributors][link-contributors]
+- Oladipupo Isola
 
 ## License
 
