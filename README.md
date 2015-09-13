@@ -7,7 +7,7 @@ This is a package that tells your developer status based on the number of reposi
 Via Composer
 
 ``` bash
-$ composer require league/:package_name
+$ composer require league/evangelist
 ```
 
 ## Usage
