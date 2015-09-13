@@ -1,11 +1,11 @@
 <?php
 
-namespace League\EvangelistStatus;
+namespace League\evangelist;
 
 class EvangelistStatus
 {
     /**
-     * Create a new Skeleton Instance
+     * Create a new EvangelistStatus Instance
      */
     public function __construct($username)
     {
@@ -13,13 +13,10 @@ class EvangelistStatus
         return true;
     }
 
-    /**
-     * Friendly welcome
-     *
-     * @param string $phrase Phrase to return
-     *
-     * @return string Returns the phrase passed in
-     */
+    public function username()
+    {
+        return $this->username;
+    }
 
     public function fetchGithubData($username)
     {
