@@ -1,7 +1,8 @@
 <?php
 
-namespace League\evangelist\Test;
-use League\evangelist;
+namespace League\Evangelist\Test;
+
+use League\Evangelist\EvangelistStatus;
 
 
 class EvangelistTest extends \PHPUnit_Framework_TestCase
@@ -13,8 +14,8 @@ class EvangelistTest extends \PHPUnit_Framework_TestCase
    */
     public function test_username()
     {
-        $user = new a\EvangelistStatus('dipo');
-        $this->assertEquals('dipo', $this->username());
+        $user = new EvangelistStatus('dipo');
+        $this->assertEquals('dipo', $user->username());
     }
 
     //public function testTrueIsTrue()

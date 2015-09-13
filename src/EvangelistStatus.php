@@ -1,6 +1,6 @@
 <?php
 
-namespace League\evangelist;
+namespace League\Evangelist;
 
 class EvangelistStatus
 {
@@ -9,7 +9,7 @@ class EvangelistStatus
      */
     public function __construct($username)
     {
-        this->username = $username;
+        $this->username = $username;
         return true;
     }
 
@@ -20,7 +20,7 @@ class EvangelistStatus
 
     public function fetchGithubData($username)
     {
-        return https://api.github.com/users/{$username};
+        //return https://api.github.com/users/{$username};
     }
 
     public function echoPhrase($phrase)
