@@ -1,8 +1,8 @@
 <?php
 
-namespace League\evangelist\tests;
+namespace League\EvangelistStatus\Test;
 
-class ExampleTest extends \PHPUnit_Framework_TestCase
+class EvangelistTest extends \PHPUnit_Framework_TestCase
 {
 
 
