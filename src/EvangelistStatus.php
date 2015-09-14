@@ -22,9 +22,4 @@ class EvangelistStatus
     {
         //return https://api.github.com/users/{$username};
     }
-
-    public function echoPhrase($phrase)
-    {
-        return $phrase;
-    }
 }

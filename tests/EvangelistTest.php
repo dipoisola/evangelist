@@ -17,9 +17,4 @@ class EvangelistTest extends \PHPUnit_Framework_TestCase
         $user = new EvangelistStatus('dipo');
         $this->assertEquals('dipo', $user->username());
     }
-
-    //public function testTrueIsTrue()
-    //{
-    //    $this->assertTrue(true);
-    //}
 }

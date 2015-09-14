@@ -1,6 +1,9 @@
 # Developer Evangelist
 
-This is a package that tells your developer status based on the number of repositories on your Github account.
+This is a package that tells your developer status based on the number of repositories on your Github account. 
+With at least 5 repositories and at most 10 repositories, the status of Junior Evangelist is achieved. 
+With at least 11 repositories and at most 20 repositories, the status of Associate Evangelist is achieved.
+More than 20 Github repositories makes you a Most Senior Evangelist 
 
 ## Install
 
@@ -13,8 +16,8 @@ $ composer require league/evangelist
 ## Usage
 
 ``` php
-$skeleton = new League\Skeleton();
-echo $skeleton->echoPhrase('Hello, League!');
+$evangelist = new League\evangelist();
+echo $evangelist->getStatus();
 ```
 
 ## Change log
