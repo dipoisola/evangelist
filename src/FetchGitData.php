@@ -12,9 +12,16 @@ class FetchGitData
         curl_setopt($gitfetch, CURLOPT_RETURNTRANSFER, 1);
         $data = curl_exec($gitfetch);
         curl_close($gitfetch);
+        curl_error($gitfetch);
 
         $decoded = json_decode($data, true);
+        var_dump($decoded);
         return $decoded;
+    }
+
+    public static function ShowString()
+    {
+        return "baba";
     }
 
 }

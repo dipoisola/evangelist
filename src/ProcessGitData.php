@@ -11,5 +11,11 @@ class ProcessGitData
         $gitData = FetchGitData::FetchData($username);
         $number_of_repos = $gitData['public_repos'];
         return $number_of_repos;
+        //return true;
+    }
+
+    public static function CheckStatus()
+    {
+
     }
 }

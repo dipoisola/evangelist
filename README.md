@@ -37,7 +37,7 @@ $ composer test
 
 If you discover any security related issues, please email dipoisola@gmail.com instead of using the issue tracker.
 
-## Contributing
+## Credit
 
 - Oladipupo Isola
 

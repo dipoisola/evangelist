@@ -7,10 +7,8 @@ use League\Evangelist\EvangelistStatus;
 
 class EvangelistTest extends \PHPUnit_Framework_TestCase
 {
-
-
   /**
-   * Test that true does in fact equal true
+   * Test that function returns name
    */
     public function test_username()
     {
