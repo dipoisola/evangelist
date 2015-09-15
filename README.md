@@ -1,8 +1,11 @@
 # Developer Evangelist
 
 This is a package that tells your developer status based on the number of repositories on your Github account. 
+
 With at least 5 repositories and at most 10 repositories, the status of Junior Evangelist is achieved. 
+
 With at least 11 repositories and at most 20 repositories, the status of Associate Evangelist is achieved.
+
 More than 20 Github repositories makes you a Most Senior Evangelist 
 
 ## Install
@@ -30,15 +33,11 @@ Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recen
 $ composer test
 ```
 
-## Contributing
-
-Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
-
 ## Security
 
 If you discover any security related issues, please email dipoisola@gmail.com instead of using the issue tracker.
 
-## Credit
+## Contributing
 
 - Oladipupo Isola
 

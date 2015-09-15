@@ -12,6 +12,6 @@ class FetchGitTest extends \PHPUnit_Framework_TestCase
    */
     public function test_git_result()
     {
-        $this->assertTrue(FetchGitData::FetchData('dzpo'));
+        $this->assertFalse(is_array(FetchGitData::FetchData('dzpo')));
     }
 }

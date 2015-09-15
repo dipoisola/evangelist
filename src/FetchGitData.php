@@ -14,7 +14,7 @@ class FetchGitData
         curl_close($gitfetch);
 
         $decoded = json_decode($data, true);
-        return true;
+        return $decoded;
     }
 
 }
