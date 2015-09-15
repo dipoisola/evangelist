@@ -18,8 +18,8 @@ class EvangelistStatus
         return $this->username;
     }
 
-    public function fetchGithubData($username)
+    public function DisplayStatus($username)
     {
-        //return https://api.github.com/users/{$username};
+
     }
 }

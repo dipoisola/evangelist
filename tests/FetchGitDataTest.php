@@ -12,7 +12,6 @@ class FetchGitTest extends \PHPUnit_Framework_TestCase
    */
     public function test_git_result()
     {
-        //$user = new EvangelistStatus('dipo');
         $this->assertTrue(FetchGitData::FetchData('dzpo'));
     }
 }

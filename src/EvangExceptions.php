@@ -12,8 +12,5 @@ class EvangExceptions
         } else {
             return $this->username;
         }
-
     }
-
-
 }
