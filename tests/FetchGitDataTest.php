@@ -10,9 +10,9 @@ class FetchGitTest extends \PHPUnit_Framework_TestCase
    * Test that true does in fact equal true
    */
 
-    public function test_git_result1()
+    public function test_git_result()
     {
-        $this->assertEquals(gettype('array'), gettype(FetchGitData::FetchData('dzpo')));
+        $this->assertEquals(gettype(1), gettype(FetchGitData::FetchData('dzpo')));
     }
 }
 

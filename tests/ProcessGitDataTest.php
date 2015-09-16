@@ -19,7 +19,7 @@ class ProcessGitDataTest extends \PHPUnit_Framework_TestCase
         return [
             ['andela-oisola', 'You are coming up, Junior Evangelist. Keep it moving!'],
             ['andela-amaborukoje', 'Good Job, Associate Evangelist!'],
-            ['andela-smartins', 'Hey, Most Senior Evangelist! You are the man!'],
+            ['andela-smartin', 'Hey, Most Senior Evangelist! You are the man!'],
             // ['andela-kerinoso', 'So sad!!! You have a very low contribution to open-source. You need ' . (5 - EvangelistFetch::getNumOfPublicRepos('andela-kerinoso')) . ' of your work left to be added to your public repo to become a Junior Evangelist.'],
             ['', 'GitHub username cannot be blank!!!'],
             ['njfjffojirfjnknv', 'User cannot be found on Github.']
