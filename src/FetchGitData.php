@@ -2,8 +2,10 @@
 
 namespace League\Evangelist;
 
-class FetchGitData
-{
+use League\Evangelist\HttpRequest;
+
+ class FetchGitData
+ {
     public static function FetchData($username)
     {
         $gitfetch = curl_init();
@@ -11,17 +13,11 @@ class FetchGitData
         curl_setopt($gitfetch, CURLOPT_USERAGENT, "Mozilla/5.0 (Windows; U; Windows NT 6.1; rv:2.2) Gecko/20110201");
         curl_setopt($gitfetch, CURLOPT_RETURNTRANSFER, 1);
         $data = curl_exec($gitfetch);
-        curl_close($gitfetch);
         curl_error($gitfetch);
-
         $decoded = json_decode($data, true);
-        var_dump($decoded);
-        return $decoded;
+        //$http_status = curl_getinfo($gitfetch, CURLINFO_HTTP_CODE);
+        //var_dump($http_status);
+        curl_close($gitfetch);
+        return $decoded['public_repos'];
     }
-
-    public static function ShowString()
-    {
-        return "baba";
-    }
-
 }

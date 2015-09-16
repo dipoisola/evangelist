@@ -8,14 +8,13 @@ class ProcessGitData
 {
     public static function ProcessData($username)
     {
-        $gitData = FetchGitData::FetchData($username);
-        $number_of_repos = $gitData['public_repos'];
-        return $number_of_repos;
-        //return true;
-    }
-
-    public static function CheckStatus()
-    {
-
+        $publicRepos = FetchGitData::FetchData($username);
+        if ($publicRepos >= 21) {
+            return 'Hey, Most Senior Evangelist! You are the man!';
+        } elseif ($publicRepos >= 11) {
+            return 'Good Job, Associate Evangelist!';
+        } elseif ($publicRepos >= 5) {
+            return 'You are coming up, Prodigal Evangelist. Keep it moving!';
+        }
     }
 }
