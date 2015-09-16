@@ -23,10 +23,16 @@ We accept contributions via Pull Requests on [Github](https://github.com/thephpl
 
 
 ## Running Tests
+In the project directory, run the command below
 
 ``` bash
 $ composer test
 ```
 
+or 
+
+``` bash
+$ phpunit
+```
 
 **Happy coding**!
