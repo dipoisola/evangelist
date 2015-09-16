@@ -2,60 +2,42 @@
 
 namespace League\Evangelist\Test;
 
-use phpmock\phpunit\PHPMock;
+use League\Evangelist\FetchGitData;
 
-class BuiltinTest extends \PHPUnit_Framework_TestCase
+class FetchGitTest extends \PHPUnit_Framework_TestCase
 {
+  /**
+   * Test that true does in fact equal true
+   */
 
-    use PHPMock;
-
-    public function testCurl()
+    public function test_git_result1()
     {
-        $exec = $this->getFunctionMock(__NAMESPACE__, "curl");
-        $exec->expects($this->once())->willReturnCallback(
-            function ($command, &$output, &$return_var) {
-                $this->assertEquals("foo", $command);
-                $output = ["failure"];
-                $return_var = 1;
-            }
-        );
-
-        curl("foo", $output, $return_var);
-        $this->assertEquals(["failure"], $output);
-        $this->assertEquals(1, $return_var);
+        $this->assertEquals(gettype('array'), gettype(FetchGitData::FetchData('dzpo')));
     }
 }
 
-// namespace League\Evangelist\Test;
+//namespace League\Evangelist\Test;
 
-// use League\Evangelist\CurlRequest;
+// use phpmock\phpunit\PHPMock;
 
-
-// class FetchGitTest extends \PHPUnit_Framework_TestCase
+// class BuiltinTest extends \PHPUnit_Framework_TestCase
 // {
-//   /**
-//    * Test that true does in fact equal true
-//    */
-//      public function test_git_result()
-//      {
-//          $r = FetchGitData::FetchData('dzpo');
-//          $this->assertEquals(gettype(array()), gettype($r));
-//      }
 
-//      public function test_git_result1()
-//      {
-//          $this->assertEquals(gettype('array'), gettype(FetchGitData::ShowString('dzpo')));
-//      }
+//     use PHPMock;
 
-//      public function testGetThrowsWhenContentTypeIsNotJson() {
-//      $http = $this->getMock('HttpRequest');
-//      $http->expects($this->any())
-//           ->method('getInfo')
-//           ->will($this->returnValue('not JSON'));
-//      $this->setExpectedException('HttpResponseException');
-//      // create class under test using $http instead of a real CurlRequest
-//      $fixture = new CurlRequest($http);
-//      $fixture->get();
-//      }
+//     public function testCurl()
+//     {
+//         $exec = $this->getFunctionMock(__NAMESPACE__, "curl");
+//         $exec->expects($this->once())->willReturnCallback(
+//             function ($command, &$output, &$return_var) {
+//                 $this->assertEquals("foo", $command);
+//                 $output = ["failure"];
+//                 $return_var = 1;
+//             }
+//         );
+
+//         curl("foo", $output, $return_var);
+//         $this->assertEquals(["failure"], $output);
+//         $this->assertEquals(1, $return_var);
+//     }
 // }
-
