@@ -15,9 +15,8 @@ use League\Evangelist\HttpRequest;
         $data = curl_exec($gitfetch);
         curl_error($gitfetch);
         $decoded = json_decode($data, true);
-        //$http_status = curl_getinfo($gitfetch, CURLINFO_HTTP_CODE);
-        //var_dump($http_status);
         curl_close($gitfetch);
+
         return $decoded['public_repos'];
     }
 }
