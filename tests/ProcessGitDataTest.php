@@ -32,7 +32,6 @@ class ProcessGitDataTest extends \PHPUnit_Framework_TestCase
     public function testGetStatusOfEvangelist($username, $response)
     {
         //$status = new Evangelist($username);
-
         $this->assertEquals($response, ProcessGitData::ProcessData($username));
     }
 }

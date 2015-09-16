@@ -9,14 +9,6 @@ class BuiltinTest extends \PHPUnit_Framework_TestCase
 
     use PHPMock;
 
-    // public function testTime()
-    // {
-    //     $time = $this->getFunctionMock(__NAMESPACE__, "time");
-    //     $time->expects($this->once())->willReturn(3);
-
-    //     $this->assertEquals(3, time());
-    // }
-
     public function testCurl()
     {
         $exec = $this->getFunctionMock(__NAMESPACE__, "curl");

@@ -1,5 +1,7 @@
 <?php
 
+use League\Evangelist\ProcessGitData;
+
 namespace League\Evangelist;
 
 class EvangelistStatus
@@ -18,8 +20,9 @@ class EvangelistStatus
         return $this->username;
     }
 
-    public function DisplayStatus($username)
+    public function getStatus()
     {
-
+        $status = ProcessGitData::ProcessData($this->username);
+        return $status;
     }
 }

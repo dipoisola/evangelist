@@ -14,7 +14,7 @@ class ProcessGitData
         } elseif ($publicRepos >= 11) {
             return 'Good Job, Associate Evangelist!';
         } elseif ($publicRepos >= 5) {
-            return 'You are coming up, Prodigal Evangelist. Keep it moving!';
+            return 'You are coming up, Junior Evangelist. Keep it moving!';
         }
     }
 }
