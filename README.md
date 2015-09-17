@@ -19,7 +19,7 @@ $ composer require league/evangelist
 ## Usage
 
 ``` php
-$evangelist = new League\evangelist();
+$evangelist = new EvangelistStatus($username);
 echo $evangelist->getStatus();
 ```
 
