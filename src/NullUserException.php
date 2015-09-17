@@ -3,10 +3,11 @@
 namespace League\Evangelist;
 
 /**
- * Class EmptyUsernameException
+ * Class NullUsernameException
  *
  * @package League\Evangelist
  */
+
 class NullUserException extends \Exception
 {
     /**
