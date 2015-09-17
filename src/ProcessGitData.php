@@ -4,6 +4,7 @@ namespace League\Evangelist;
 
 use League\Evangelist\FetchGitData;
 use Leaugue\Evangelist\InexistentUserException;
+use Leaugue\Evangelist\NullUserException;
 
 class ProcessGitData
 {
@@ -12,6 +13,8 @@ class ProcessGitData
         try {
             $publicRepos = FetchGitData::FetchData($username);
         } catch (InexistentUserException $e) {
+            return $e->respond();
+        } catch (NullUserException $e) {
             return $e->respond();
         }
 
