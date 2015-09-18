@@ -3,12 +3,17 @@
 namespace League\Evangelist;
 
 use League\Evangelist\Exception\InexistentUserException;
+use League\Evangelist\Exception\NullUserException;
 
 class FetchGitData
  {
     public static function FetchData($username)
     {
         try {
+
+            if($username == "") {
+                throw new NullUserException();
+            }
 
             $gitfetch = curl_init();
             curl_setopt($gitfetch, CURLOPT_URL, "https://api.github.com/users/$username");
@@ -26,6 +31,10 @@ class FetchGitData
 
         } catch (InexistentUserException $e) {
             return $e->respond();
+            die("Bye.");
+        } catch (NullUserException $e) {
+            return $e->respond();
         }
+
     }
 }
