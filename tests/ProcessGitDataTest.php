@@ -18,7 +18,7 @@ class ProcessGitDataTest extends \PHPUnit_Framework_TestCase
             ['andela-asogbein', 'Good Job, Associate Evangelist!'],
             ['andela-smartin', 'Hey, Most Senior Evangelist! You are the man!'],
             ['', 'Github username cannot be null. Please enter a valid username.'],
-            ['0e', 'User cannot be found on Github.']
+            ['kzjk', 'User cannot be found on Github.']
         ];
     }
 

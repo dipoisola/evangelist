@@ -17,7 +17,6 @@ class ProcessGitData
         } catch (NullUserException $e) {
             return $e->respond();
         }
-        var_dump($publicRepos);
 
         if ($publicRepos['public_repos'] >= 21) {
             return 'Hey, Most Senior Evangelist! You are the man!';
