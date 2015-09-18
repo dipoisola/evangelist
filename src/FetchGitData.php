@@ -27,7 +27,8 @@ class FetchGitData
             if($decoded['message'] == "Not Found") {
                 throw new InexistentUserException();
             }
-            return $decoded;
+            //var_dump((int) $decoded['public_repos']);
+            return (int) $decoded['public_repos'];
 
         } catch (InexistentUserException $e) {
             return $e->respond();

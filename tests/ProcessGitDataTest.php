@@ -14,18 +14,20 @@ class ProcessGitDataTest extends \PHPUnit_Framework_TestCase
     public function Inputs()
     {
         return [
-            ['andela-vdugeri', 'You are coming up, Junior Evangelist. Keep it moving!'],
-            ['andela-asogbein', 'Good Job, Associate Evangelist!'],
-            ['busayo', 'Hey, Most Senior Evangelist! You are the man!'],
-            ['andela-oisola', 'You have a low number of repository number to be rated']
+            'andela-vdugeri' => 'You are coming up, Junior Evangelist. Keep it moving!',
+            'andela-asogbein' => 'Good Job, Associate Evangelist!',
+            'busayo' => 'Hey, Most Senior Evangelist! You are the man!',
+            'andela-oisola' => 'You have a low number of repositories. You cannot be rated.'
         ];
     }
 
     /**
      * @dataProvider Inputs
      */
-    public function test_return_status($username, $response)
+    public function test_return_status()
     {
-        $this->assertEquals($response, ProcessGitData::ProcessData($username));
+       foreach($this->Inputs() as $key => $value){
+            $this->assertEquals($value, ProcessGitData::ProcessData($key));
+       }
     }
 }
