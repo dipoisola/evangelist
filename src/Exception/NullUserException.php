@@ -1,6 +1,6 @@
 <?php
 
-namespace League\Evangelist;
+namespace League\Evangelist\Exception;
 
 /**
  * Class NullUsernameException

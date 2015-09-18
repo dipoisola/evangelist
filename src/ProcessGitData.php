@@ -3,8 +3,8 @@
 namespace League\Evangelist;
 
 use League\Evangelist\FetchGitData;
-use Leaugue\Evangelist\InexistentUserException;
-use Leaugue\Evangelist\NullUserException;
+use Leaugue\Evangelist\Exception\InexistentUserException;
+use Leaugue\Evangelist\Exception\NullUserException;
 
 class ProcessGitData
 {

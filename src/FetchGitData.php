@@ -2,9 +2,7 @@
 
 namespace League\Evangelist;
 
-use League\Evangelist\HttpRequest;
-
- class FetchGitData
+class FetchGitData
  {
     public static function FetchData($username)
     {
