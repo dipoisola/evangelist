@@ -15,4 +15,33 @@ class EvangelistTest extends \PHPUnit_Framework_TestCase
         $user = new EvangelistStatus('dipo');
         $this->assertEquals('dipo', $user->username());
     }
+
+  /**
+   * Test that function returns name
+   */
+    public function test_return_result()
+    {
+        $user = new EvangelistStatus('dzpo');
+        $this->assertEquals('dzpo', $user->username());
+    }
+
+    public function supplyUsername()
+    {
+        return [
+            ['andela-vdugeri', 'You are coming up, Junior Evangelist. Keep it moving!'],
+            ['andela-asogbein', 'Good Job, Associate Evangelist!'],
+            ['andela-smartins', 'Hey, Most Senior Evangelist! You are the man!']
+        ];
+    }
+
+    /**
+     * Test for the equality between the expected values and actual values returned by function getStatus()
+     *
+     * @dataProvider supplyUsername
+     */
+    public function test_Evangelist_getStatus_result($username, $output)
+    {
+        $status = new EvangelistStatus($username);
+        $this->assertEquals($output, $status->getStatus());
+    }
 }

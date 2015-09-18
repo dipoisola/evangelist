@@ -16,7 +16,7 @@ class ProcessGitDataTest extends \PHPUnit_Framework_TestCase
         return [
             ['andela-vdugeri', 'You are coming up, Junior Evangelist. Keep it moving!'],
             ['andela-asogbein', 'Good Job, Associate Evangelist!'],
-            // ['andela-smartin', 'Hey, Most Senior Evangelist! You are the man!'],
+            ['andela-smartins', 'Hey, Most Senior Evangelist! You are the man!'],
             // ['', 'Github username cannot be null. Please enter a valid username.'],
             // ['kzjk', 'User cannot be found on Github.']
         ];
@@ -25,7 +25,7 @@ class ProcessGitDataTest extends \PHPUnit_Framework_TestCase
     /**
      * @dataProvider Inputs
      */
-    public function testGetStatusOfEvangelist($username, $response)
+    public function test_return_status($username, $response)
     {
         $this->assertEquals($response, ProcessGitData::ProcessData($username));
     }
