@@ -17,12 +17,13 @@ class ProcessGitData
         } catch (NullUserException $e) {
             return $e->respond();
         }
+        var_dump($publicRepos);
 
-        if ($publicRepos >= 21) {
+        if ($publicRepos['public_repos'] >= 21) {
             return 'Hey, Most Senior Evangelist! You are the man!';
-        } elseif ($publicRepos >= 11) {
+        } elseif ($publicRepos['public_repos'] >= 11) {
             return 'Good Job, Associate Evangelist!';
-        } elseif ($publicRepos >= 5) {
+        } elseif ($publicRepos['public_repos'] >= 5) {
             return 'You are coming up, Junior Evangelist. Keep it moving!';
         }
     }
