@@ -14,9 +14,9 @@ class EvangelistTest extends \PHPUnit_Framework_TestCase
     public function UsernameData()
     {
         return [
-            'andela-vdugeri' => 'You are coming up, Junior Evangelist. Keep it moving!',
-            'andela-asogbein' => 'Good Job, Associate Evangelist!',
-            'busayo' => 'Hey, Most Senior Evangelist! You are the man!'
+            ['andela-vdugeri', 'You are coming up, Junior Evangelist. Keep it moving!'],
+            ['andela-asogbein', 'Good Job, Associate Evangelist!'],
+            ['busayo', 'Hey, Most Senior Evangelist! You are the man!']
         ];
     }
 
@@ -25,14 +25,9 @@ class EvangelistTest extends \PHPUnit_Framework_TestCase
      *
      * @dataProvider UsernameData
      */
-    public function test_Evangelist()
+    public function test_Evangelist_getStatus_result($username, $output)
     {
-        foreach($this->UsernameData() as $key => $value) {
-            $status = new EvangelistStatus($key);
-            //var_dump($status->getStatus());
-            //var_dump($key);
-            //var_dump($value);
-            $this->assertEquals($value, $status->getStatus());
-       }
+        $status = new EvangelistStatus($username);
+        $this->assertEquals($output, $status->getStatus());
     }
 }

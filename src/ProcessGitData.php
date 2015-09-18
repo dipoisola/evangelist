@@ -14,13 +14,13 @@ class ProcessGitData
         try {
             $publicRepos = FetchGitData::FetchData($username);
 
-            if ($publicRepos >= 21) {
+            if ($publicRepos['public_repos'] >= 21) {
                 return 'Hey, Most Senior Evangelist! You are the man!';
-            } elseif ($publicRepos >= 11 && $publicRepos < 21) {
+            } elseif ($publicRepos['public_repos'] >= 11) {
                 return 'Good Job, Associate Evangelist!';
-            } elseif ($publicRepos >= 5 && $publicRepos < 11) {
+            } elseif ($publicRepos['public_repos'] >= 5) {
                 return 'You are coming up, Junior Evangelist. Keep it moving!';
-            } elseif ($publicRepos < 5) {
+            } elseif ($publicRepos['public_repos'] < 5) {
                 throw new LowRepoNumberException();
             }
         } catch(LowRepoNumberException $e) {

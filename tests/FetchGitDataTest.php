@@ -11,8 +11,7 @@ class FetchGitTest extends \PHPUnit_Framework_TestCase
    */
     public function test_git_api_result()
     {
-        echo gettype(FetchGitData::FetchData('dzpo'));
-        $this->assertEquals(gettype(1), gettype(FetchGitData::FetchData('dzpo')));
+        $this->assertEquals(gettype(array()), gettype(FetchGitData::FetchData('dzpo')));
     }
   /**
    * Test for inexistent Github user and Null input

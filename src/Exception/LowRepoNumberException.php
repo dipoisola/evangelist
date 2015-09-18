@@ -17,6 +17,6 @@ class LowRepoNumberException extends \Exception
      */
     public function respond()
     {
-        return 'You have a low number of repositories. You cannot be rated.';
+        return 'You have a low number of repository number to be rated.';
     }
 }
