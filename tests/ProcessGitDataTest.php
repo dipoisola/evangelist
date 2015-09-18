@@ -8,7 +8,7 @@ use League\Evangelist\ProcessGitData;
 class ProcessGitDataTest extends \PHPUnit_Framework_TestCase
 {
   /**
-   * Test that function ProcessData works
+   * Test that function ProcessData returns appropiate messages
    */
 
     public function Inputs()
@@ -16,7 +16,7 @@ class ProcessGitDataTest extends \PHPUnit_Framework_TestCase
         return [
             ['andela-vdugeri', 'You are coming up, Junior Evangelist. Keep it moving!'],
             ['andela-asogbein', 'Good Job, Associate Evangelist!'],
-            ['andela-smartins', 'Hey, Most Senior Evangelist! You are the man!'],
+            ['busayo', 'Hey, Most Senior Evangelist! You are the man!'],
             // ['', 'Github username cannot be null. Please enter a valid username.'],
             // ['kzjk', 'User cannot be found on Github.']
         ];
