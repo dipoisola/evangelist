@@ -16,7 +16,8 @@ class ProcessGitDataTest extends \PHPUnit_Framework_TestCase
         return [
             ['andela-vdugeri', 'You are coming up, Junior Evangelist. Keep it moving!'],
             ['andela-asogbein', 'Good Job, Associate Evangelist!'],
-            ['busayo', 'Hey, Most Senior Evangelist! You are the man!']
+            ['busayo', 'Hey, Most Senior Evangelist! You are the man!'],
+            ['andela-oisola', 'You have a low number of repository number to be rated']
         ];
     }
 
