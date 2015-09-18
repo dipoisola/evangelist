@@ -10,20 +10,6 @@ class EvangelistTest extends \PHPUnit_Framework_TestCase
   /**
    * Test that function returns name
    */
-    public function test_username()
-    {
-        $user = new EvangelistStatus('dipo');
-        $this->assertEquals('dipo', $user->username());
-    }
-
-  /**
-   * Test that function returns name
-   */
-    public function test_return_result()
-    {
-        $user = new EvangelistStatus('dzpo');
-        $this->assertEquals('dzpo', $user->username());
-    }
 
     public function UsernameData()
     {
@@ -35,7 +21,7 @@ class EvangelistTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test for the equality between the expected values and actual values returned by function getStatus()
+     * Test for the equality between the expected values and actual values returned by EvangelistStatus::getStatus()
      *
      * @dataProvider UsernameData
      */
