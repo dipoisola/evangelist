@@ -15,11 +15,6 @@ class EvangelistStatus
         return true;
     }
 
-    public function username()
-    {
-        return $this->username;
-    }
-
     public function getStatus()
     {
         $status = ProcessGitData::ProcessData($this->username);
