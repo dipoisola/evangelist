@@ -33,7 +33,6 @@
         "psr-4": {
             "League\\EvangelistStatus\\Test\\": "tests"
         }
-        "classmap": ["/src"]
     },
     "scripts": {
         "test": "phpunit"
