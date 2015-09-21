@@ -9,10 +9,11 @@ class EvangelistStatus
     /**
      * Create a new EvangelistStatus Instance
      */
+    protected $username;
+
     public function __construct($username)
     {
         $this->username = $username;
-        return true;
     }
 
     public function getStatus()

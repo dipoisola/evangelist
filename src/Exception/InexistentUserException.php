@@ -3,7 +3,7 @@
 namespace League\Evangelist\Exception;
 
 /**
- * Class EmptyUsernameException
+ * Class InexistentUserException
  *
  * @package League\Evangelist
  */
