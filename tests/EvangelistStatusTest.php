@@ -31,3 +31,4 @@ class EvangelistTest extends \PHPUnit_Framework_TestCase
         $evangelist = new EvangelistStatus($username);
         $this->assertEquals($output, $evangelist->getStatus());
     }
+}

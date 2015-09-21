@@ -24,8 +24,6 @@ class ProcessGitData
             }
         } catch(LowRepoNumberException $e) {
             return $e->respond();
-        }            return $e->respond();
         }
-
     }
 }
