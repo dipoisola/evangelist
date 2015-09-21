@@ -1,6 +1,7 @@
 # Developer Evangelist
 
 [![Build Status](https://travis-ci.org/dzpo/evangelist.svg)](https://travis-ci.org/dzpo/evangelist)
+
 This is a package that tells your developer status based on the number of repositories you have on your Github account. 
 
 Having at least 5 repositories and at most 10 repositories makes you a Junior Evangelist. 
