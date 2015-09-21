@@ -12,8 +12,7 @@ class ProcessGitData
     public static function ProcessData($username)
     {
         try {
-            $GitData = FetchGitData::FetchData($username);
-
+			$GitData = FetchGitData::FetchData($username);
             if ($GitData['public_repos'] >= 21) {
                 return 'Hey, Most Senior Evangelist! You are the man!';
             } elseif ($GitData['public_repos'] >= 11) {
@@ -25,6 +24,7 @@ class ProcessGitData
             }
         } catch(LowRepoNumberException $e) {
             return $e->respond();
+        }            return $e->respond();
         }
 
     }

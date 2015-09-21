@@ -20,6 +20,7 @@ class EvangelistTest extends \PHPUnit_Framework_TestCase
         ];
     }
 
+
     /**
      * Test for the equality between the expected values and actual values returned by $evangelist->getStatus()
      *
@@ -30,4 +31,3 @@ class EvangelistTest extends \PHPUnit_Framework_TestCase
         $evangelist = new EvangelistStatus($username);
         $this->assertEquals($output, $evangelist->getStatus());
     }
-}
