@@ -10,6 +10,9 @@ use League\Evangelist\Exception\LowRepoNumberException;
 
 class ProcessGitData
 {
+    /**
+     * Returns corresponding remark for user's number of repositories
+     */
     public static function processData($username)
     {
         try {
