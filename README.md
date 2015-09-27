@@ -28,8 +28,10 @@ $ composer install
 
 ## Usage
 
+To use, create an object of EvangelistStatus with a Github username passed as an argument. Then call the getStatus function with the object. See below.
+
 ``` php
-$evangelist = new EvangelistStatus();
+$evangelist = new EvangelistStatus(GithubUsername);
 echo $evangelist->getStatus();
 ```
 

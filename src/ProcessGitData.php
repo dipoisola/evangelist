@@ -3,13 +3,14 @@
 namespace League\Evangelist;
 
 use League\Evangelist\FetchGitData;
-use Leaugue\Evangelist\Exception\InexistentUserException;
-use Leaugue\Evangelist\Exception\NullUserException;
+use League\Evangelist\Exception\InexistentUserException;
+use League\Evangelist\Exception\NullUserException;
 use League\Evangelist\Exception\LowRepoNumberException;
+
 
 class ProcessGitData
 {
-    public static function ProcessData($username)
+    public static function processData($username)
     {
         try {
             $GitData = FetchGitData::FetchData($username);
