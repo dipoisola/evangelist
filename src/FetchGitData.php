@@ -14,7 +14,6 @@ class FetchGitData
     public static function fetchData($username)
     {
         try {
-
             if($username == "") {
                 throw new NullUserException();
             }
@@ -31,14 +30,21 @@ class FetchGitData
             if(isset($decoded['message'])) {
                 throw new InexistentUserException();
             }
+
             return $decoded;
 
         } catch (InexistentUserException $e) {
             return $e->respond();
-            die("Bye.");
         } catch (NullUserException $e) {
             return $e->respond();
         }
+    }
 
+    public static function getNoOfRepos($user)
+    {
+        $raw = FetchGitData::fetchData($user);
+        $NoOfRepos = $raw['public_repos'];
+        return $NoOfRepos;
     }
 }
+

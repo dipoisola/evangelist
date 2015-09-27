@@ -13,20 +13,19 @@ class ProcessGitData
     public static function processData($username)
     {
         try {
-            $GitData = FetchGitData::FetchData($username);
+            $NoOfRepos = FetchGitData::getNoOfRepos($username);
 
-            if ($GitData['public_repos'] >= 21) {
+            if ($NoOfRepos >= 21) {
                 return 'Hey, Most Senior Evangelist! You are the man!';
-            } elseif ($GitData['public_repos'] >= 11) {
+            } elseif ($NoOfRepos >= 11) {
                 return 'Good Job, Associate Evangelist!';
-            } elseif ($GitData['public_repos'] >= 5) {
+            } elseif ($NoOfRepos >= 5) {
                 return 'You are coming up, Junior Evangelist. Keep it moving!';
-            } elseif ($GitData['public_repos'] < 5) {
+            } elseif ($NoOfRepos < 5) {
                 throw new LowRepoNumberException();
             }
         } catch(LowRepoNumberException $e) {
             return $e->respond();
         }
-
     }
 }
