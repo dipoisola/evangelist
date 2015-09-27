@@ -7,11 +7,10 @@ use League\Evangelist\ProcessGitData;
 
 class ProcessGitDataTest extends \PHPUnit_Framework_TestCase
 {
-  /**
-   * Test that function ProcessData returns appropiate messages
-   */
-
-    public function Inputs()
+    /**
+     * Test that function ProcessData returns appropiate messages
+     */
+    public function inputs()
     {
         return [
             ['andela-vdugeri', 'You are coming up, Junior Evangelist. Keep it moving!'],
@@ -22,10 +21,10 @@ class ProcessGitDataTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @dataProvider Inputs
+     * @dataProvider inputs
      */
     public function test_return_status($username, $response)
     {
-        $this->assertEquals($response, ProcessGitData::ProcessData($username));
+        $this->assertEquals($response, ProcessGitData::processData($username));
     }
 }

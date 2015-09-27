@@ -16,6 +16,9 @@ class EvangelistStatus
         $this->username = $username;
     }
 
+    /**
+     * Returns remarks depending on user's number of repositories
+     */
     public function getStatus()
     {
         $status = ProcessGitData::ProcessData($this->username);
