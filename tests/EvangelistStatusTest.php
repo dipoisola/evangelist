@@ -10,7 +10,6 @@ class EvangelistTest extends \PHPUnit_Framework_TestCase
     /**
      * Test that function returns name
      */
-
     public function usernameData()
     {
         return [
