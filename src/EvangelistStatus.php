@@ -6,11 +6,11 @@ namespace League\Evangelist;
 
 class EvangelistStatus
 {
-    protected $username;
-
     /**
      * Create a new EvangelistStatus Instance
      */
+    protected $username;
+
     public function __construct($username)
     {
         $this->username = $username;

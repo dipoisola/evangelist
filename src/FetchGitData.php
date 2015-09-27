@@ -9,7 +9,7 @@ use League\Evangelist\Exception\NullUserException;
 class FetchGitData
  {
     /**
-     * Data required by fetchData()
+     * Data required by fetchData FUNCTION
      */
     const CLIENT_ID = '513ce061270c479165f3';
     const CLIENT_SECRET = '0e8fdd973d153045631b0710db2a0339c3d0d90d';
