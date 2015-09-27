@@ -10,7 +10,6 @@ class ProcessGitDataTest extends \PHPUnit_Framework_TestCase
     /**
      * Test that function ProcessData returns appropiate messages
      */
-
     public function inputs()
     {
         return [
@@ -26,6 +25,6 @@ class ProcessGitDataTest extends \PHPUnit_Framework_TestCase
      */
     public function test_return_status($username, $response)
     {
-        $this->assertEquals($response, ProcessGitData::ProcessData($username));
+        $this->assertEquals($response, ProcessGitData::processData($username));
     }
 }

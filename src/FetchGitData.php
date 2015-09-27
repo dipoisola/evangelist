@@ -18,14 +18,13 @@ class FetchGitData
                 throw new NullUserException();
             }
 
-            $gitfetch = curl_init();
-            curl_setopt($gitfetch, CURLOPT_URL, "https://api.github.com/users/$username?client_id=CLIENT_ID&client_secret=CLIENT_SECRET");
-            curl_setopt($gitfetch, CURLOPT_USERAGENT, "Mozilla/5.0 Gecko/20110201");
-            curl_setopt($gitfetch, CURLOPT_RETURNTRANSFER, 1);
-            $data = curl_exec($gitfetch);
-            curl_error($gitfetch);
+            $githubCurl = curl_init();
+            curl_setopt($githubCurl, CURLOPT_URL, "https://api.github.com/users/$username?client_id=CLIENT_ID&client_secret=CLIENT_SECRET");
+            curl_setopt($githubCurl, CURLOPT_USERAGENT, "Mozilla/5.0 Gecko/20110201");
+            curl_setopt($githubCurl, CURLOPT_RETURNTRANSFER, 1);
+            $data = curl_exec($githubCurl);
             $decoded = json_decode($data, true);
-            curl_close($gitfetch);
+            curl_close($githubCurl);
 
             if(isset($decoded['message'])) {
                 throw new InexistentUserException();

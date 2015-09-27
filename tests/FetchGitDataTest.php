@@ -23,11 +23,19 @@ class FetchGitTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals("User cannot be found on Github.", FetchGitData::FetchData('kzjk'));
     }
 
-  /**
-   * Test for Null input
-   */
+    /**
+     * Test for Null input
+     */
     public function test_for_null_user()
     {
         $this->assertEquals("Github username cannot be null. Please enter a valid username.", FetchGitData::FetchData(''));
+    }
+
+    /**
+     * Test if function getNoOfRepos returns an integer
+     */
+    public function test_if_integer_returns()
+    {
+        $this->assertTrue(is_integer(FetchGitData::getNoOfRepos('andela-oisola')));
     }
 }
