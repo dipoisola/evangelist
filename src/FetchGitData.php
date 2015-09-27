@@ -11,7 +11,6 @@ class FetchGitData
     /**
      * Data required by fetchData()
      */
-    const GITHUB_API_LINK = 'https://api.github.com/users';
     const CLIENT_ID = '513ce061270c479165f3';
     const CLIENT_SECRET = '0e8fdd973d153045631b0710db2a0339c3d0d90d';
 
@@ -26,7 +25,7 @@ class FetchGitData
             }
 
             $githubCurl = curl_init();
-            curl_setopt($githubCurl, CURLOPT_URL, "GITHUB_API_LINK/$username?client_id=CLIENT_ID&client_secret=CLIENT_SECRET");
+            curl_setopt($githubCurl, CURLOPT_URL, "https://api.github.com/users/$username?client_id=CLIENT_ID&client_secret=CLIENT_SECRET");
             curl_setopt($githubCurl, CURLOPT_USERAGENT, "Mozilla/5.0 Gecko/20110201");
             curl_setopt($githubCurl, CURLOPT_RETURNTRANSFER, 1);
             $data = curl_exec($githubCurl);
