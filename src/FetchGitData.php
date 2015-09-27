@@ -20,6 +20,7 @@ class FetchGitData
     public static function fetchData($username)
     {
         try {
+
             if($username == "") {
                 throw new NullUserException();
             }
