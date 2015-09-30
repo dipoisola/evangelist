@@ -16,7 +16,9 @@ class ProcessGitData
     public static function processData($username)
     {
         try {
-			$noOfRepos = FetchGitData::getNoOfRepos($username);			if ($noOfRepos >= 21) {                return 'Hey, Most Senior Evangelist! You are the man!';
+			$noOfRepos = FetchGitData::getNoOfRepos($username);
+            if ($noOfRepos >= 21) {
+                return 'Hey, Most Senior Evangelist! You are the man!';
             } elseif ($noOfRepos >= 11) {
                 return 'Good Job, Associate Evangelist!';
             } elseif ($noOfRepos >= 5) {
