@@ -20,7 +20,7 @@ class FetchGitTest extends \PHPUnit_Framework_TestCase
      */
     public function test_for_inexistent_user()
     {
-        $this->assertEquals("User cannot be found on Github.", FetchGitData::fetchData('kzjk'));
+        $this->assertEquals("User cannot be found on Github.", FetchGitData::returnGithubDetails('kzjk'));
     }
 
     /**
@@ -28,7 +28,7 @@ class FetchGitTest extends \PHPUnit_Framework_TestCase
      */
     public function test_for_null_user()
     {
-        $this->assertEquals("Github username cannot be null. Please enter a valid username.", FetchGitData::fetchData(''));
+        $this->assertEquals("Github username cannot be null. Please enter a valid username.", FetchGitData::returnGithubDetails(''));
     }
 
     /**
