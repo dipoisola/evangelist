@@ -8,13 +8,22 @@ use League\Evangelist\Exception\NullUserException;
 
 class FetchGitData
  {
+
+    /**
+     * Load the environment stored credentials
+     */
+    public static function loadDotEnv()
+    {
+        $env = new Dotenv(__DIR__ . '/../');
+        $env->load();
+    }
+
     /**
      * Communicates with Github API to fetch data
      */
     public static function fetchData($username)
     {
-        $env = new Dotenv(__DIR__ . '/../');
-        $env->load();
+        self::loadDotEnv();
 
         $githubCurl = curl_init();
         curl_setopt($githubCurl, CURLOPT_URL, 'https://api.github.com/users/' . $username . '?client_id=' . getenv('CLIENT_ID') . '&client_secret=' . getenv('CLIENT_SECRET'));
@@ -39,7 +48,7 @@ class FetchGitData
                 throw new NullUserException();
             }
 
-            $fetchedData = static::fetchData($username);
+            $fetchedData = self::fetchData($username);
 
             if(isset($fetchedData['message'])) {
                 throw new InexistentUserException();
@@ -59,7 +68,7 @@ class FetchGitData
      */
     public static function getNoOfRepos($user)
     {
-        $githubDetails = FetchGitData::returnGithubDetails($user);
+        $githubDetails = self::returnGithubDetails($user);
         return $githubDetails['public_repos'];
     }
 }
