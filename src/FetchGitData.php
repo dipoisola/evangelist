@@ -30,8 +30,7 @@ class FetchGitData
 
             $client = new Client();
             $response = $client->get('https://api.github.com/users/' . $username . '?client_id=' . getenv('CLIENT_ID') . '&client_secret=' . getenv('CLIENT_SECRET'));
-            $fullDetails = $response->json();
-            return $fullDetails;
+            return $response->json();
         } catch(ClientException $e) {
             return "User cannot be found on Github.";
         }
@@ -68,7 +67,6 @@ class FetchGitData
      */
     public static function getNoOfRepos($user)
     {
-        $githubDetails = self::returnGithubDetails($user);
-        return $githubDetails['public_repos'];
+        return self::returnGithubDetails($user)['public_repos'];
     }
 }
