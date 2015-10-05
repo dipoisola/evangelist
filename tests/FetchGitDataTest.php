@@ -36,6 +36,6 @@ class FetchGitTest extends \PHPUnit_Framework_TestCase
      */
     public function test_if_integer_is_returned()
     {
-        $this->assertTrue(is_integer(FetchGitData::getNoOfRepos('andela-oisola')));
+        $this->assertInternalType('integer', FetchGitData::getNoOfRepos('andela-oisola'));
     }
 }
