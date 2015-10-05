@@ -12,7 +12,7 @@ class FetchGitTest extends \PHPUnit_Framework_TestCase
      */
     public function test_git_api_result()
     {
-        $this->assertEquals(gettype(array()), gettype(FetchGitData::fetchData('dzpo')));
+        $this->assertInternalType('array', FetchGitData::fetchData('dzpo'));
     }
 
     /**
