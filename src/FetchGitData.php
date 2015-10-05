@@ -43,7 +43,7 @@ class FetchGitData
     {
         try {
 
-            if ($username == "") {
+            if (!isset($username)) {
                 throw new NullUserException();
             }
 

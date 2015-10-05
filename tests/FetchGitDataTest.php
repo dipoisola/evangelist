@@ -28,7 +28,7 @@ class FetchGitTest extends \PHPUnit_Framework_TestCase
      */
     public function test_for_null_user()
     {
-        $this->assertEquals("Github username cannot be null. Please enter a valid username.", FetchGitData::returnGithubDetails(''));
+        $this->assertEquals("Github username cannot be null. Please enter a valid username.", FetchGitData::returnGithubDetails(null));
     }
 
     /**
