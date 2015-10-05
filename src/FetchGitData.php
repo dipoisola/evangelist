@@ -27,12 +27,16 @@ class FetchGitData
      */
     public static function fetchData($username)
     {
-        self::loadDotEnv();
+        try {
+            self::loadDotEnv();
 
-        $client = new Client();
-        $response = $client->get('https://api.github.com/users/' . $username . '?client_id=' . getenv('CLIENT_ID') . '&client_secret=' . getenv('CLIENT_SECRET'));
-        $expose = $response->json();
-        return $expose;
+            $client = new Client();
+            $response = $client->get('https://api.github.com/users/' . $username . '?client_id=' . getenv('CLIENT_ID') . '&client_secret=' . getenv('CLIENT_SECRET'));
+            $expose = $response->json();
+            return $expose;
+        } catch(\GuzzleHttp\Exception\ClientException $e) {
+            return "User cannot be found on Github.";
+        }
     }
 
     /**
