@@ -2,13 +2,15 @@
 
 namespace League\Evangelist\Exception;
 
+use Exception;
+
 /**
  * Class LowRepoNumberException
  *
  * @package League\Evangelist
  */
 
-class LowRepoNumberException extends \Exception
+class LowRepoNumberException extends Exception
 {
     /**
      * Handles inexistent username

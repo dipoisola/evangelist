@@ -2,12 +2,14 @@
 
 namespace League\Evangelist\Exception;
 
+use Exception;
+
 /**
  * Class InexistentUserException
  *
  * @package League\Evangelist
  */
-class InexistentUserException extends \Exception
+class InexistentUserException extends Exception
 {
     /**
      * Handles inexistent username
