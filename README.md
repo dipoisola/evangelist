@@ -1,6 +1,6 @@
 # Developer Evangelist
 
-[![Build Status](https://travis-ci.org/dzpo/evangelist.svg)](https://travis-ci.org/dzpo/evangelist)
+[![Build Status](https://travis-ci.org/dzpo/evangelist.svg)](https://travis-ci.org/andela-oisola/open-source-evangelist)
 
 This is a package that tells your developer status based on the number of repositories you have on your Github account. 
 
