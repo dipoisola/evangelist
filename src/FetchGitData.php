@@ -2,12 +2,16 @@
 
 namespace League\Evangelist;
 
+chdir(dirname(__DIR__));
+require_once 'vendor/autoload.php';
+
 use Dotenv\Dotenv;
+use GuzzleHttp\Client;
 use League\Evangelist\Exception\InexistentUserException;
 use League\Evangelist\Exception\NullUserException;
 
 class FetchGitData
- {
+{
 
     /**
      * Load the environment stored credentials
@@ -25,16 +29,10 @@ class FetchGitData
     {
         self::loadDotEnv();
 
-        $githubCurl = curl_init();
-        curl_setopt($githubCurl, CURLOPT_URL, 'https://api.github.com/users/' . $username . '?client_id=' . getenv('CLIENT_ID') . '&client_secret=' . getenv('CLIENT_SECRET'));
-        curl_setopt($githubCurl, CURLOPT_USERAGENT, "league\evangelist agent");
-        curl_setopt($githubCurl, CURLOPT_RETURNTRANSFER, 1);
-        $data = curl_exec($githubCurl);
-        $decoded = json_decode($data, true);
-        curl_close($githubCurl);
-
-        var_dump($decoded);
-        return $decoded;
+        $client = new Client();
+        $response = $client->get('https://api.github.com/users/' . $username . '?client_id=' . getenv('CLIENT_ID') . '&client_secret=' . getenv('CLIENT_SECRET'));
+        $expose = $response->json();
+        return $expose;
     }
 
     /**
@@ -72,5 +70,3 @@ class FetchGitData
         return $githubDetails['public_repos'];
     }
 }
-
-FetchGitData::fetchData('dzpo');

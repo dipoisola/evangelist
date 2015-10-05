@@ -1,8 +1,8 @@
 <?php
 
-use League\Evangelist\ProcessGitData;
-
 namespace League\Evangelist;
+
+use League\Evangelist\ProcessGitData;
 
 class EvangelistStatus
 {
