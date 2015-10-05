@@ -13,7 +13,7 @@ use Exception;
 class LowRepoNumberException extends Exception
 {
     /**
-     * Handles inexistent username
+     * Handles Low Repository number exception
      *
      * @return string
      */

@@ -13,7 +13,7 @@ use Exception;
 class NullUserException extends Exception
 {
     /**
-     * Handles inexistent username
+     * Handles null username exception
      *
      * @return string
      */

@@ -3,8 +3,6 @@
 namespace League\Evangelist;
 
 use League\Evangelist\FetchGitData;
-use League\Evangelist\Exception\InexistentUserException;
-use League\Evangelist\Exception\NullUserException;
 use League\Evangelist\Exception\LowRepoNumberException;
 
 
