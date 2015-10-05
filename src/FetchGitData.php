@@ -2,11 +2,9 @@
 
 namespace League\Evangelist;
 
-chdir(dirname(__DIR__));
-require_once 'vendor/autoload.php';
-
 use Dotenv\Dotenv;
 use GuzzleHttp\Client;
+use GuzzleHttp\Exception\ClientException;
 use League\Evangelist\Exception\InexistentUserException;
 use League\Evangelist\Exception\NullUserException;
 
@@ -32,9 +30,9 @@ class FetchGitData
 
             $client = new Client();
             $response = $client->get('https://api.github.com/users/' . $username . '?client_id=' . getenv('CLIENT_ID') . '&client_secret=' . getenv('CLIENT_SECRET'));
-            $expose = $response->json();
-            return $expose;
-        } catch(\GuzzleHttp\Exception\ClientException $e) {
+            $fullDetails = $response->json();
+            return $fullDetails;
+        } catch(ClientException $e) {
             return "User cannot be found on Github.";
         }
     }
