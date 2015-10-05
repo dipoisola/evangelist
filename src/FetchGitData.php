@@ -44,13 +44,13 @@ class FetchGitData
     {
         try {
 
-            if($username == "") {
+            if ($username == "") {
                 throw new NullUserException();
             }
 
             $fetchedData = self::fetchData($username);
 
-            if(isset($fetchedData['message'])) {
+            if (isset($fetchedData['message'])) {
                 throw new InexistentUserException();
             }
 
