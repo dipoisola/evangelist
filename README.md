@@ -1,6 +1,6 @@
 # Developer Evangelist
 
-[![Build Status](https://travis-ci.org/dzpo/evangelist.svg)](https://travis-ci.org/andela-oisola/open-source-evangelist)
+[![Build Status](https://travis-ci.org/dzpo/evangelist.svg)](https://travis-ci.org/dzpo/evangelist)
 
 This is a package that tells your developer status based on the number of repositories you have on your Github account. 
 
@@ -17,13 +17,7 @@ Via Composer
 To add open-source-evangelist as a dependency, run the following in your project directory.
 
 ``` bash
-$ composer require league/evangelist
-```
-
-Then to install, run
-
-``` bash
-$ composer install
+$ composer require dipo/evangelist
 ```
 
 ## Usage
