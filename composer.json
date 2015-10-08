@@ -1,8 +1,8 @@
 {
-    "name": "league/evangelist",
-    "description": "To check for developer status.",
+    "name": "dipo/evangelist",
+    "description": "To check for developer status based on number of Github repositories.",
     "keywords": [
-        "league",
+        "dipo",
         "evangelist"
     ],
     "homepage": "https://github.com/thephpleague/evangelist",
